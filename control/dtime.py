@@ -51,9 +51,9 @@ from scipy.signal import zpk2tf, tf2zpk
 import numpy as np
 from cmath import exp
 from warnings import warn
-from control.lti import isctime
-from control.statesp import StateSpace, _convertToStateSpace
-from control.xferfcn import TransferFunction, _convertToTransferFunction
+from .lti import isctime
+from .statesp import StateSpace, _convertToStateSpace
+from .xferfcn import TransferFunction, _convertToTransferFunction
 
 # Sample a continuous time system
 def sample_system(sysc, Ts, method='matched'):
@@ -115,7 +115,7 @@ def sample_system(sysc, Ts, method='matched'):
             sysd = TransferFunction(scipySysD[0][0], scipySysD[1], Ts)
         except ImportError:
             raise TypeError("cont2discrete not found in scipy.signal; upgrade to v0.10.0+")
-        
+
     elif method == 'zoh':
         try:
             from scipy.signal import cont2discrete
