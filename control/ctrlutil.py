@@ -42,7 +42,7 @@
 
 # Packages that we need access to
 import scipy as sp
-import lti
+from . import lti
 
 # Specific functions that we use
 from scipy import pi

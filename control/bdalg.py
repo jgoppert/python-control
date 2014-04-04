@@ -54,9 +54,9 @@ $Id$
 """
 
 import scipy as sp
-import xferfcn as tf
-import statesp as ss
-import frdata as frd
+from . import xferfcn as tf
+from . import statesp as ss
+from . import frdata as frd
 
 def series(sys1, sys2):
     """Return the series connection sys2 * sys1 for --> sys1 --> sys2 -->.
