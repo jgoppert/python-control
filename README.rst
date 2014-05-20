@@ -1,7 +1,8 @@
 Python Control System Library
 =============================
 
-.. image:: https://travis-ci.org/jgoppert/python-control.svg?branch=master   :target: https://travis-ci.org/jgoppert/python-control
+.. image:: https://travis-ci.org/jgoppert/python-control.svg?branch=master
+        :target: https://travis-ci.org/jgoppert/python-control
 
 This is a fork of python-control: http://python-control.sf.net/
 
