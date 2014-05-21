@@ -7,8 +7,8 @@ python:
 before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  - sudo apt-get update --fix-missing
-  - sudo apt-get build-dep python-scipy
+  - sudo apt-get update --fix-missing -qq
+  - sudo apt-get build-dep python-scipy -qq
 # command to install dependencies from source
 # note, separating requirements so that travis
 # will get output in less than 5 min and won't
