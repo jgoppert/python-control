@@ -10,6 +10,15 @@ before_install:
   - sudo apt-get update --fix-missing
   - sudo apt-get build-dep python-scipy
 # command to install dependencies from source
-install: "pip install -r requirements.txt"
+# note, separating requirements so that travis
+# will get output in less than 5 min and won't
+# terminate, using q to keep build info to a
+# minumum for dependencies
+install:
+  - pip install -q numpy
+  - pip install -q scipy
+  - pip install -q slycot
+  - pip install -q matplotlib
+
 # command to run tests
 script: python runtests.py
