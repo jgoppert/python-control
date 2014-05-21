@@ -87,18 +87,18 @@ class TestSlycot(unittest.TestCase):
                                 ssTransformed_nr, inputs, outputs,
                                 ssTransformed_A, ssTransformed_B,
                                 ssTransformed_C, ssTransformed_D, tol1=0.0)
-                        # print 'size(Trans_A)=',ssTransformed_A.shape
+                        # print('size(Trans_A)=',ssTransformed_A.shape)
                         if (verbose):
                             print('===== Transformed SS ==========')
                             print(matlab.ss(ssTransformed_A, ssTransformed_B,
                                             ssTransformed_C, ssTransformed_D))
-                            # print 'Trans_nr=',ssTransformed_nr
-                            # print 'tfOrig_index=',tfOriginal_index
-                            # print 'tfOrig_ucoeff=',tfOriginal_ucoeff
-                            # print 'tfOrig_dcoeff=',tfOriginal_dcoeff
-                            # print 'tfTrans_index=',tfTransformed_index
-                            # print 'tfTrans_ucoeff=',tfTransformed_ucoeff
-                            # print 'tfTrans_dcoeff=',tfTransformed_dcoeff
+                            # print('Trans_nr=',ssTransformed_nr
+                            # print('tfOrig_index=',tfOriginal_index)
+                            # print('tfOrig_ucoeff=',tfOriginal_ucoeff)
+                            # print('tfOrig_dcoeff=',tfOriginal_dcoeff)
+                            # print('tfTrans_index=',tfTransformed_index)
+                            # print('tfTrans_ucoeff=',tfTransformed_ucoeff)
+                            # print('tfTrans_dcoeff=',tfTransformed_dcoeff)
                         # Compare the TF directly, must match
                         # numerators
                         # TODO test failing!
@@ -167,14 +167,14 @@ class TestSlycot(unittest.TestCase):
                                         numTransformed[outputNum][inputNum],
                                         denTransformed[outputNum]),
                                         freq, Plot=False)
-                                # print 'numOrig=',
-                                #  numOriginal[outputNum][inputNum]
-                                # print 'denOrig=',
-                                #  denOriginal[outputNum]
-                                # print 'numTrans=',
-                                #  numTransformed[outputNum][inputNum]
-                                # print 'denTrans=',
-                                #  denTransformed[outputNum]
+                                # print('numOrig=',
+                                #  numOriginal[outputNum][inputNum])
+                                # print('denOrig=',
+                                #  denOriginal[outputNum])
+                                # print('numTrans=',
+                                #  numTransformed[outputNum][inputNum])
+                                # print('denTrans=',
+                                #  denTransformed[outputNum])
                                 np.testing.assert_array_almost_equal(
                                     ssOriginalMag, tfOriginalMag, decimal=3)
                                 np.testing.assert_array_almost_equal(
