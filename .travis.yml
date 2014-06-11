@@ -27,6 +27,7 @@ install:
   - kill $msg_pid
 
 # command to run tests
-script: python runtests.py --coverage
+script:
+  - coverage run --source=control setup.py test
 after_success:
   - coveralls
