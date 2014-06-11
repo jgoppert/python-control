@@ -27,6 +27,6 @@ install:
   - kill $msg_pid
 
 # command to run tests
-script: nosetests --with-coverage --cover-package=control
+script: python runtests.py --coverage
 after_success:
   - coveralls
