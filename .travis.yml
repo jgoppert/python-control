@@ -21,6 +21,6 @@ install:
   - kill $msg_pid
 
 # command to run tests
-script: nosetests --with-coverage
+script: nosetests --with-coverage --cover-package=control
 after_success:
   - coveralls
