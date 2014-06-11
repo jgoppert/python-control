@@ -152,8 +152,7 @@ def setup_package():
         license='BSD',
         classifiers=[_f for _f in CLASSIFIERS.split('\n') if _f],
         platforms=["Windows", "Linux", "Solaris", "Mac OS-X", "Unix"],
-        requires=['numpy', 'scipy'],
-        install_requires=['parsimonious', 'ply', 'grako', 'enum'],
+        install_requires=['numpy', 'scipy'],
         tests_require=['nose'],
         test_suite='nose.collector',
         packages=find_packages(
