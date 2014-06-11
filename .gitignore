@@ -6,3 +6,4 @@ dist/
 MANIFEST
 control/version.py
 build.log
+.coverage
