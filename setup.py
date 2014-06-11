@@ -157,7 +157,7 @@ def setup_package():
         test_suite='nose.collector',
         packages=find_packages(
             # choosing to distribute tests
-            # exclude=['*.test']
+            # exclude=['*.tests']
         ),
     )
 
